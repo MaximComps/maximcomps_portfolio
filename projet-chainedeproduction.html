@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxim COMPS</title>
+    <script src="JS/anims.js" defer></script>
+    <link rel="icon" type="image/png" sizes="53x53" href="Images/Logos/logo_site.png">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-nom-du-site">
+            <h2>Maxim COMPS</h2>
+        </div>
+        <nav>
+            <ul class="header-nav-links">
+                <li><a href="index.html">Acceuil</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="experiences.html">Expériences</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+            </ul>
+        </nav>
+        <div class="header-logo">
+            <img src="Images/Logos/logo.png" alt="Logo du Site">
+        </div>
+    </header>
+
+    <main>
+        <div class="banderau_introduction">
+            <img src="Images/Projets/chaine-de-production_presentation.jpg" class="banderau_image">
+            <h1>Chaine de Production</h1>
+        </div>
+        
+        <div class="expli-container-left">
+            <div class="ecl-text">
+                <h2>Objectifs et Présentation</h2>
+                <p>Répartis en cinq binômes au sein d’une entreprise fictive, nous devions chacun travailler sur l’automatisation de l’une des cinq stations présentes dans la chaîne de production.</p>
+                <p>La station 1 servait de station de distribution. Elle récupérait les pièces, rangées en colonne, à l’aide d’un bras manipulateur afin de les transférer vers la suite de la chaîne. La station 2 jouait le rôle d’un ascenseur, permettant d’acheminer les pièces vers la station 4 ou la station 5, via le tapis roulant constituant la station 3. La station 5 correspondait à une zone de stockage, utilisant un translateur pour assurer le rangement des pièces.</p>
+                <p>Pour ma part, j’ai travaillé sur la station 4, qui était une station de tri. Celle-ci acheminait les pièces à l’aide d’une courroie vers trois zones de dépôt distinctes, en fonction du type détecté : pièces rouges, noires ou métalliques.</p>
+                <p>À l’issue des séances de travail, chaque binôme devait présenter sa station ainsi que les solutions techniques retenues et le fonctionnement mis en œuvre.</p>
+            </div>
+        </div>
+
+        <div class="expli-container-right">
+            <img src="Images/Projets/chaine-de-production_developpement.jpg" class="ecr-img">
+            <div class="ecr-text">
+                <h2>Travaux et Développement</h2>
+                <p>Dans ce travail réalisé sur Control Expert de Schneider Electric, nous devions concevoir le GRAFCET correspondant au fonctionnement de la station. En fonction du type de pièce détecté par les deux capteurs, l’un de couleur et l’autre de détection métallique, le système devait rétracter le stoppeur approprié afin d’orienter la pièce vers le bon dépôt.</p>
+                <p>Pendant l’acheminement d’une pièce vers sa zone de dépôt, les autres étaient retenues par un bloqueur, les arrêtant en amont des capteurs afin d’éviter toute interférence ou erreur de tri.</p>
+                <p>La démarche de travail débutait par une analyse fonctionnelle du système, permettant d’élaborer le schéma du GRAFCET. Les modifications étaient ensuite testées en simulation. En l’absence de problèmes majeurs, nous procédions à une validation sur site. En cas d’erreur ou de nécessité d’amélioration, nous reprenions le cycle modification, simulation, test jusqu’à obtention d’un fonctionnement optimal.</p>
+                <p>Ce projet comportait également une dimension d’organisation et de collaboration. Nous devions documenter notre avancement et partager les informations avec les autres binômes via un espace commun sur Trello. Le lien vers cet espace est disponible en bas de page pour consulter davantage d’informations et de documents relatifs au projet.</p>
+            </div>
+        </div>
+
+        <div class="expli-container-left">
+            <div class="ecl-text">
+                <h2>Erreurs et Amélioration</h2>
+                <p>Pour ce projet, les erreurs étaient difficiles à trouver. En suivant les règles qui régissent un bon GRAFCET, on ne faisait quasiment jamais d’erreurs. Mais les améliorations apportées à ce système étaient plus présentes.</p>
+                <p>Avec un libre cours à nos idées, on a décidé de rajouter un compteur de pièces selon leur type, affiché dans une IHM. Si un dépôt n’avait plus la place d’accueillir une pièce supplémentaire, alors on envoyait à la station précédente la consigne de ne plus envoyer de pièces et de les passer à la station 5 le temps que les dépôts soient vidés. Cette amélioration majeure de la consigne de base a permis de tester plusieurs méthodes de comptage sur le logiciel.</p>
+            </div>
+            <img src="Images/Projets/chaine-de-production_ameliorations.jpg" class="ecl-img">
+        </div>
+
+        <a id="expli-pieces-jointes" href="https://trello.com/invite/b/67f4e225ee984ce5bcb10b42/ATTI9217b2e7f65464059946d5afe5557e2e3EFF08D4/station-4" class="black-btn" target="_blank">
+            <span>Lien vers Trello de la Station 4</span>
+            <img src="Images/Icones/lien-externe.png" class="btn-icon">
+        </a>
+
+        <div class="bot_background"><img src="Images/Logos/banderau_bas.png"></div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-list">
+                <h4 class="footer-list-title">Infos Supplémentaires</h4>
+                <ul class="footer-list-elements">
+                    <li><img src="Images/Icones/email.png" alt="Logo Mail"> maxim.comps@gmail.com</li>
+                    <li><img src="Images/Icones/mobile.png" alt="Logo Mobile"> 06 69 38 06 27</li>
+                    <li><img src="Images/Icones/adresse.png" alt="Logo Adresse"> 118 Route de Narbonne, Tripode C, Toulouse 31400</li>
+                </ul>
+            </div>
+
+            <div class="footer-list">
+                <h4 class="footer-list-title">Contacts</h4>
+                <ul class="footer-list-elements">
+                    <li><img src="Images/Icones/linkedin.png" alt="Logo LinkedIn"><a href="https://www.linkedin.com/in/maxim-comps-624720350" target="_blank"> LinkedIn</a></li>
+                    <li><img src="Images/Icones/gitlab.png" alt="Logo GitHub"><a href="https://github.com/MaximComps" target="_blank"> GitLab</a></li>
+                    <li><img src="Images/Icones/instagram.png" alt="Logo Instagram"><a href="https://www.instagram.com/maxim.comps/?next=%2F" target="_blank"> Instagram</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-list">
+                <h4 class="footer-list-title">Pièces Jointes</h4>
+                <ul class="footer-list-elements">
+                    <li><img src="Images/Icones/fichier.png" alt="Logo Fichier"><a href="Documents/CV_Maxim_COMPS.pdf" download> CV</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-mention">
+                <p>© Maxim COMPS, 2025 Tous droits reservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -28,13 +28,14 @@
 
     <main>
         <div class="banderau_introduction">
-            <img src="Images/Projets/robot-mobile_presentation.jpg" class="banderau_image">
+            <img src="Images/Projets/choppe-lapin_presentation.jpg" class="banderau_image">
             <h1>Choppe Lapin</h1>
         </div>
         
         <div class="expli-container-left">
             <div class="ecl-text">
                 <h2>Objectifs et Présentation</h2>
+                <p>Le projet consiste principalement à développer un mini-jeu jouable sur un petit écran. Mon binôme et moi avons décidé de nous inspirer du jeu rétro Duck Hunt, sorti en 1984.</p>
                 <p>À partir d’un écran et d’un télémètre laser, l’objectif de ce jeu est d’attraper un lapin avant qu’il ne déguerpisse. La vitesse de la main est régie par l’état du lapin affiché à l’écran. Il peut être au repos, en état normal ou aux aguets (REST, STAY, WATCH).</p>
                 <p>Lorsqu’il est en état normal, le joueur peut avancer sa main vers le capteur. S’il avance trop vite, le lapin se méfie et passe en mode surveillance. Si le joueur continue à aller trop vite, la partie est perdue et le lapin s’enfuit.</p>
                 <p>À l’inverse, si le joueur avance trop lentement, le lapin devient inattentif, ce qui permet d’accélérer légèrement. Cependant, des mouvements trop brusques le réveillent immédiatement et provoquent sa fuite.</p>
@@ -42,10 +43,13 @@
         </div>
 
         <div class="expli-container-right">
-            <img src="Images/Projets/choppe-lapin_cover.jpg" class="ecr-img">
+            <img src="Images/Projets/choppe-lapin_developpement.jpg" class="ecr-img">
             <div class="ecr-text">
                 <h2>Travaux et Développement</h2>
-                <p>Le premier problème et le plus important était la précision du capteur télémétrique. On pouvait arranger avec des moyennages des mesures reçues par la fonction getDistance() provenant de la librairie du capteur. De plus, on arrondissait le résultat à la dizaine sachant que les valeurs changeaient énormément par rapport aux tremblements de la main mais aussi à l’environnement qui pouvait être trop lumineux. Le seconde défaut était la vitesse d’affichage de l’image qui pouvait porter à confusion le joueur, s’il faisait changer l’état du lapin trop rapidement. Au début, mon binôme et moi avions fait l’erreur de réafficher toute l’image à chaque changement d’état, et étant donné qu’on affichait les pixels un par un et malgré la vitesse de traitement de la carte Arduino, l’image prenait trop de temps à changer. Pour pallier à cela, on a affiché le fond qu’au début du jeu, mais le lapin qu’on avait rendu d’une forme carrée, rentrait dans une zone qui était actualisé selon l’état.</p>
+                <p>Pour ce projet en C++, j’ai été chargé de la configuration, de l’initialisation et de l’exploitation du télémètre laser VL53L0X. Après une analyse des différentes solutions disponibles, j’ai sélectionné une bibliothèque open source compatible avec Arduino, offrant des fonctions fiables pour l’initialisation du capteur et la récupération des mesures de distance.</p>
+                <p>Le câblage a ensuite été réalisé entre la carte Arduino, l’écran d’affichage et le télémètre laser. Le capteur étant basé sur une communication I2C, nous avons connecté les lignes SDA et SCL aux broches correspondantes de la carte, ainsi que l’alimentation et la masse. Une plaque d’essai a été utilisée pour assurer un montage propre et modulable.</p>
+                <p>Après l’initialisation du capteur dans la fonction setup(), les mesures étaient acquises dans la boucle principale loop() à l’aide de la fonction getDistance(). Afin d’améliorer la stabilité des valeurs affichées, les mesures étaient stockées dans un tableau mis à jour en continu. La moyenne des valeurs enregistrées sur une durée d’une seconde était ensuite calculée, ce qui permettait de filtrer les parasites et les fluctuations.</p>
+                <p>Cette méthode de moyenne glissante a permis d’obtenir une distance plus représentative améliorant ainsi la précision perçue du système.</p>
             </div>
         </div>
 
@@ -56,7 +60,7 @@
                 <p>Le second défaut concernait la vitesse d’affichage de l’image, qui pouvait perturber le joueur lorsque l’état du lapin changeait trop rapidement. Au départ, mon binôme et moi réaffichions l’image complète à chaque changement d’état. Or, comme les pixels étaient affichés un par un, malgré la vitesse de traitement de la carte Arduino, le rafraîchissement était trop lent.</p>
                 <p>Pour résoudre ce problème, nous avons affiché le fond une seule fois au début du jeu. Le lapin, que nous avons simplifié en une forme carrée, était ensuite affiché dans une zone spécifique actualisée dynamiquement selon son état.</p>
             </div>
-            <img src="Images/Projets/choppe-lapin_cover.jpg" class="ecl-img">
+            <img src="Images/Projets/choppe-lapin_ameliorations.jpg" class="ecl-img">
         </div>
 
         <div class="bot_background"><img src="Images/Logos/banderau_bas.png"></div>
@@ -95,5 +99,4 @@
         </div>
     </footer>
 </body>
-
 </html>
