@@ -35,7 +35,8 @@
         <div class="expli-container-left">
             <div class="ecl-text">
                 <h2>Objectifs et Présentation</h2>
-                <p></p>
+                <p>Le but de ce projet était d’automatiser un système de pompage selon le fonctionnement suivant : la pompe 1 devait acheminer l’eau depuis une source jusqu’à un bassin. Lorsque le bassin atteignait son niveau haut, ou lorsque le château d’eau était au niveau bas, la pompe 2 transférait l’eau du bassin vers le château d’eau. Ce dernier distribuait ensuite une quantité d’eau variable vers des habitations.</p>
+                <p>Ce système était modélisé dans notre salle de travail sous la forme d’un bidon d’eau alimentant deux bassins à l’aide de pompes, programmées selon les GRAFCET que nous devions concevoir.</p>
             </div>
         </div>
 
@@ -43,14 +44,16 @@
             <img src="Images/Projets/station-de-pompage_developpement.jpg" class="ecr-img">
             <div class="ecr-text">
                 <h2>Travaux et Développement</h2>
-                <p></p>
+                <p>Pour débuter le projet, il était nécessaire de réaliser le câblage de la platine afin d’assurer la correspondance entre les entrées et sorties de l’automate et le boîtier de commande avec le système matériel, tout en intégrant les dispositifs de sécurité destinés à protéger l’utilisateur et l’installation. Après la modélisation du schéma électrique et la finalisation du câblage, la platine a été intégrée au système.</p>
+                <p>Par la suite, le travail a consisté à développer une simulation autonome permettant de surveiller l’état du système et de tester le bon fonctionnement des programmes. Les niveaux d’eau étaient modélisés à l’aide de variables de type INT, en complément des variables booléennes correspondant aux seuils bas, moyen et haut. Cela permettait de représenter et de visualiser un bargraphe du niveau de chaque bassin. L’état des pompes ainsi que les alertes étaient également indiqués par des voyants. Des commandes manuelles ont aussi été implémentées, finalisant ainsi la conception de l’IHM.</p>
+                <p>Concernant la partie sur site, la création des GRAFCET de fonctionnement distinguait deux modes : un mode manuel, commandé via le boîtier de commande, et un mode automatique correspondant au fonctionnement précédemment décrit.</p>
             </div>
         </div>
 
         <div class="expli-container-left">
             <div class="ecl-text">
                 <h2>Erreurs et Amélioration</h2>
-                <p></p>
+                <p>La plupart des problèmes se sont présentés durant la création des GRAFCET. La compatibilité entre les commandes manuelles et le programme automatisé était un défi au début de nos efforts. Mais c’est grâce au GRAFCET de sécurité que la résolution de nos erreurs se sont réalisés. Le GRAFCET de choix du mode a aussi été fusionné avec celui de fonctionnement pour gérer dès l’allumage du système le choix du mode, et pour ne pas trop avoir de GRAFCET. </p>
             </div>
             <img src="Images/Projets/station-de-pompage_ameliorations.jpg" class="ecl-img">
         </div>

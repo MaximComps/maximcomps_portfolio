@@ -35,7 +35,9 @@
         <div class="expli-container-left">
             <div class="ecl-text">
                 <h2>Objectifs et Présentation</h2>
-                <p></p>
+                <p>Le translateur rotatif sert à déposer une caisse détectée d’un point d’origine pour l’amener sur l’un des quatre anneaux où l’espace est libre. C’est à partir de cinq vérins que l’on effectue un mouvement rotatif d’un cran vers la gauche ou la droite.</p>
+                <p>Le premier vérin EV1 effectuait un mouvement pour avancer la pince et le bras vers la pièce. Le deuxième, EV2, servait à monter ou descendre le bras pour soulever ou déposer la caisse. Le troisième vérin, EV3, permettait de déplacer l’anneau central d’un cran par une courroie. Les vérins EV4 et EV5 bloquaient les trois ensembles du système, avec EV4 qui bloquait le bras à l’anneau central et EV5 qui bloquait le bras sur le cran actuel, évitant les décalages indésirables.</p>
+                <p>Le programme devait être réalisé en plusieurs GRAFCET sur le logiciel Control Expert.</p>
             </div>
         </div>
 
@@ -43,14 +45,17 @@
             <img src="Images/Projets/translateur-rotatif_developpement.jpg" class="ecr-img">
             <div class="ecr-text">
                 <h2>Travaux et Développement</h2>
-                <p></p>
+                <p>En commençant par l’étude, il fallait reconnaître le pattern des vérins pour en déduire leur manipulation afin d’effectuer l’un des quatre mouvements : la prise de la caisse, sa dépose, le déplacement d’un cran vers la gauche et vers la droite du bras.</p>
+                <p>Avant de passer sur le système réel, nous devions modéliser une IHM et réaliser une simulation du translateur rotatif. En créant des variables de simulation et en mettant en place un simulacre de programme, nous avions, à partir d’informations visuelles, tous les états du système par rapport aux vérins, à la détection des emplacements libres ou encore à la position de la pince sur l’anneau central.</p>
+                <p>Après la création de la simulation, nous passions à l’aboutissement du programme réel. Nous devions créer des GRAFCET de tâche pour chacun des mouvements, un GRAFCET de sécurité pour gérer les arrêts d’urgence et les alarmes, un GRAFCET de fonctionnement pour la marche/arrêt du translateur ainsi que le choix du mode (Auto/Manu). Ces GRAFCET s’appelaient entre eux et, pour certains, géraient l’arrêt et le blocage des autres, comme celui de sécurité qui stoppait tout fonctionnement du programme.</p>
             </div>
         </div>
 
         <div class="expli-container-left">
             <div class="ecl-text">
                 <h2>Erreurs et Amélioration</h2>
-                <p></p>
+                <p>Ma plus grande erreur a été le manque d’organisation dans la mise en place des GRAFCET. Après plusieurs révisions du programme, le problème a été réglé, même si cela a amené plusieurs compromis sur les fonctionnalités des vérins. Certains étaient monostables tandis que d’autres étaient bistables, entraînant un choix entre des commandes mémorisées (SET et RESET) ou des commandes plus proches du TANT QUE.</p>
+                <p>Après ces modifications, des améliorations ont été apportées, principalement sur le mode automatique qui prenait la caisse dès qu’elle était détectée pour l’amener vers un rangement déclaré libre par le capteur.</p>
             </div>
             <img src="Images/Projets/translateur-rotatif_ameliorations.jpg" class="ecl-img">
         </div>

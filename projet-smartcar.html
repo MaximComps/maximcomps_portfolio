@@ -35,7 +35,7 @@
         <div class="expli-container-left">
             <div class="ecl-text">
                 <h2>Objectifs et Présentation</h2>
-                <p></p>
+                <p>Ce projet est la continuation d’un autre (Robot Mobile). La Smart Car est une maquette de voiture avec une carte analogique reliée à celle-ci. À terme, on pourrait la piloter depuis son téléphone via une connexion Bluetooth. Nous devions la créer à partir d’une carte analogique dans un premier aspect, et, dans un autre aspect, par un programme informatique sur une carte Arduino. L’aspect analogique et numérique de ce projet en fait un défi intéressant.</p>
             </div>
         </div>
 
@@ -43,14 +43,17 @@
             <img src="Images/Projets/smart-car_developpement.jpg" class="ecr-img">
             <div class="ecr-text">
                 <h2>Travaux et Développement</h2>
-                <p></p>
+                <p>Pour commencer, nous sommes partis de la modélisation de la carte analogique sur le logiciel Protheus, en utilisant les règles de routage des liens entre les composants et en respectant les contraintes qu’elles imposent. Le mappage était dicté par l’organisation des différentes fonctions de la Smart Car (fonctionnement moteur, buzzer, filtre passe-bas, etc.) du schéma électrique fourni.</p>
+                <p>Après l’impression de la carte PCB, il fallait souder les composants dont nous avions calculé les valeurs (condensateurs, résistances, etc.) et faire, si nécessaire, des choix judicieux entre différents modèles ou versions. Cette partie électronique s’est conclue par les tests unitaires de chacune des fonctions de la carte.</p>
+                <p>Ensuite, nous sommes passés à la partie numérique, avec le codage des fonctions en C++ sur Visual Studio. Chaque fonction de la voiture télécommandée nécessitait une étude et une analyse fonctionnelle. Par exemple, pour la connexion Bluetooth, il fallait étudier l’application mobile utilisée et la connectivité avec le périphérique attaché à la carte Arduino. Il a également été nécessaire de rechercher les valeurs numériques à convertir par rapport aux valeurs analogiques des capteurs de distance situés à l’avant et à l’arrière de la maquette.</p>
             </div>
         </div>
 
         <div class="expli-container-left">
             <div class="ecl-text">
                 <h2>Erreurs et Amélioration</h2>
-                <p></p>
+                <p>Durant les tests unitaires, il arrivait que des erreurs de calcul des valeurs des composants soient révélées. Dans ce cas, il fallait dessouder les composants concernés pour les remplacer à l’aide du fer à dessouder. Les méthodes ainsi apprises représentent la plus grande amélioration de notre technique de soudage.</p>
+                <p>Côté programmation, nous avons rencontré des erreurs de connectivité Bluetooth avec notre interface de commande sur mobile, qui n’envoyait pas les valeurs de position à la voiture. Ce problème provenait de la version du téléphone, ce qui a nécessité le choix d’un autre périphérique de connexion Bluetooth pour la voiture.</p>
             </div>
             <img src="Images/Projets/smart-car_ameliorations.jpg" class="ecl-img">
         </div>
